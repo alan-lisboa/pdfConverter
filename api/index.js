@@ -1,4 +1,4 @@
-export default function handler(req, res) {
+module.exports = function handler(req, res) {
   res.status(200).json({
     message: 'API de Conversão e Extração de PDF',
     endpoints: {
@@ -27,4 +27,4 @@ export default function handler(req, res) {
       }
     ]
   });
-}
+};

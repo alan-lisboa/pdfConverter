@@ -1,4 +1,4 @@
-import { pdf } from 'pdf-to-img';
+const { pdf } = require('pdf-to-img');
 
 /**
  * Converte um PDF em base64 para uma imagem em base64
@@ -45,7 +45,7 @@ async function convertPdfToImage(pdfBase64, pageNumber = 1, scale = 2.0) {
   }
 }
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   // Configurar CORS
   res.setHeader('Access-Control-Allow-Credentials', true);
   res.setHeader('Access-Control-Allow-Origin', '*');
